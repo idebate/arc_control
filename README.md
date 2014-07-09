@@ -37,3 +37,5 @@ Licence
 -------
 
 ```arc_control``` is licensed under the GPL version 3+.
+
+Visual control design by Daniel Janev @ Foundation IDEA Southeast Europe ```http://drbl.in/lGHh```.
