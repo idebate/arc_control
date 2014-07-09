@@ -78,7 +78,9 @@
 		return $arc_control;
 	}
 	
-	/* Example */
-	echo create_arc_control(62, 80, 5);
+	/*
+		Example
+		echo create_arc_control(62, 80, 5);
+	*/
 ?>
 
