@@ -53,6 +53,7 @@
 		$arc_control .= '</svg>';
 		$con_arc = '0,1'; $con_percent_value = $con_percent;
 
+		if ($con_percent == 100) { $control_mirror = 0; }
 		if ($control_mirror == 1) { $con_arc = '1,0'; $con_percent = $pro_percent; }
 		$con_arc_1 = 0; $con_arc_2 = 0;
 		if ($con_percent > 50) { $con_arc_1 = 360 * (50 / 100); $con_arc_2 = 360 * (($con_percent - 50) / 100); }
@@ -83,4 +84,3 @@
 		echo create_arc_control(62, 80, 5);
 	*/
 ?>
-
