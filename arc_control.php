@@ -4,7 +4,7 @@
 	 * @longdesc		Creates two associated pie charts with linked percentage values, based on TBate flat design UI, using bare SVG on the HTML side, along with inline styling for programmatic access.
 	 *
 	 * @author			Marjan Stojnev, Foundation IDEA Southeast Europe
-	 * @revision		0.8, 09.07.2014
+	 * @revision		0.8.2, 10.07.2014
 	 *
 	 * @param  integer	$pro_percent		Value of percentage for the pro (affirmative) pie.
 	 * @param  integer	$control_width		Width in pixels for the container of the individal pie control. Equal to height.
@@ -36,7 +36,6 @@
 		else { $pro_arc_1 = 360 * ($pro_percent / 100); $pro_arc_2 = 0; }
 		$pro_x_1 = $control_center + $control_radius * sin(deg2rad($pro_arc_1));
 		$pro_y_1 = $control_center - $control_radius * cos(deg2rad($pro_arc_1));
-		if ($pro_percent_1 > 25) { $pro_y_1 = $control_center + $control_radius * cos(deg2rad($pro_arc_1)); }
 		$pro_path = '<path d="M'.$control_center.','.$control_center.' L'.$control_center.','.$control_offset.' A'.$control_radius.','.$control_radius.' 1 0,1 '.$pro_x_1.','.$pro_y_1;
 		if ($pro_arc_2 != 0)
 		{
@@ -60,7 +59,6 @@
 		else { $con_arc_1 = 360 * ($con_percent / 100); $con_arc_2 = 0; }
 		$con_x_1 = $control_center + $control_radius * sin(deg2rad($con_arc_1));
 		$con_y_1 = $control_center - $control_radius * cos(deg2rad($con_arc_1));
-		if ($con_percent_1 > 25) { $con_y_1 = $control_center + $control_radius * cos(deg2rad($con_arc_1)); }
 		$con_path = '<path d="M'.$control_center.','.$control_center.' L'.$control_center.','.$control_offset.' A'.$control_radius.','.$control_radius.' 1 '.$con_arc.' '.$con_x_1.','.$con_y_1;
 		if ($con_arc_2 != 0)
 		{
